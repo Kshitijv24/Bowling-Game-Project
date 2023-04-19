@@ -223,7 +223,7 @@ Transform:
   - {fileID: 8298394608621405452}
   - {fileID: 3182958185390846723}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: -60, y: 0, z: 0}
 --- !u!135 &1670279938063132260
 SphereCollider:
@@ -288,6 +288,8 @@ MonoBehaviour:
   moveSpeed: 10
   rb: {fileID: 6619508585787019640}
   ballHeighlight: {fileID: 5176226409811198030}
+  maxRightDistance: 0.8
+  maxLeftDistance: -0.8
 --- !u!1001 &8404676312225555175
 PrefabInstance:
   m_ObjectHideFlags: 0

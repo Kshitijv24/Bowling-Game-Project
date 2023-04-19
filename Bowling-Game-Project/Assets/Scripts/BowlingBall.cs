@@ -7,6 +7,8 @@ public class BowlingBall : MonoBehaviour
     [SerializeField] float moveSpeed;
     [SerializeField] Rigidbody rb;
     [SerializeField] GameObject ballHeighlight;
+    [SerializeField] float maxRightDistance;
+    [SerializeField] float maxLeftDistance;
 
     Vector2 startTouchPosition;
     Vector2 fingerDownPosition;
@@ -21,11 +23,11 @@ public class BowlingBall : MonoBehaviour
 
     private void Update()
     {
-        MoveForwardDesktop();
+        MoveForwardWithKeyboardInputs();
         MoveLeftAndRight();
     }
 
-    private void MoveForwardDesktop()
+    private void MoveForwardWithKeyboardInputs()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -34,7 +36,31 @@ public class BowlingBall : MonoBehaviour
         }
     }
 
-    private void MoveForwardAndroid()
+    private void MoveLeftAndRight()
+    {
+        if(Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            ballPosition.x += 0.1f;
+            transform.position = ballPosition;
+
+            if(ballPosition.x > maxRightDistance)
+            {
+                ballPosition.x = maxRightDistance;
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            ballPosition.x -= 0.1f;
+            transform.position = ballPosition;
+
+            if (ballPosition.x < maxLeftDistance)
+            {
+                ballPosition.x = maxLeftDistance;
+            }
+        }
+    }
+
+    private void MoveForwardWithTouchInputs()
     {
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
@@ -51,20 +77,6 @@ public class BowlingBall : MonoBehaviour
                 swipeDirection = new Vector2(swipeDirection.y, swipeDirection.x); // Swap X and Y components
                 rb.AddForce(swipeDirection.normalized * moveSpeed, ForceMode.Impulse);
             }
-        }
-    }
-
-    private void MoveLeftAndRight()
-    {
-        if(Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            ballPosition.x += 0.1f;
-            transform.position = ballPosition;
-        }
-        else if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            ballPosition.x -= 0.1f;
-            transform.position = ballPosition;
         }
     }
 }
