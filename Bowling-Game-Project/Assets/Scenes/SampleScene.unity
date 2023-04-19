@@ -1339,14 +1339,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6619508585787019640, guid: eaf34b180d625f449b4c1ab95fb349df, type: 3}
-      propertyPath: m_UseGravity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6917146690546762736, guid: eaf34b180d625f449b4c1ab95fb349df, type: 3}
-      propertyPath: moveSpeed
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 7216802020940014013, guid: eaf34b180d625f449b4c1ab95fb349df, type: 3}
       propertyPath: m_Name
       value: Bowling Ball
