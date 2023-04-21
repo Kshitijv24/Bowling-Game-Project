@@ -9,6 +9,7 @@ public class BowlingBall : MonoBehaviour
     [SerializeField] GameObject ballHeighlight;
     [SerializeField] float maxRightDistance;
     [SerializeField] float maxLeftDistance;
+    [SerializeField] AudioSource audioSource;
 
     Vector2 startTouchPosition;
     Vector2 fingerDownPosition;
@@ -27,12 +28,23 @@ public class BowlingBall : MonoBehaviour
         MoveLeftAndRight();
     }
 
+    private void OnCollisionExit(Collision collision)
+    {
+        if(collision.gameObject.tag == "Ground")
+        {
+            audioSource.Stop();
+        }
+    }
+
     private void MoveForwardWithKeyboardInputs()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            rb.AddForce(Vector3.forward * moveSpeed, ForceMode.Impulse);
             Destroy(ballHeighlight);
+            audioSource.Play();
+            rb.AddForce(Vector3.forward * moveSpeed, ForceMode.Impulse);
+            //rb.velocity = Vector3.forward * moveSpeed;
+            
         }
     }
 
