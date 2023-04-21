@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7185945963649834071}
   - component: {fileID: 8663614493575424739}
   - component: {fileID: 357437984027390042}
+  - component: {fileID: 8439620748082794432}
   - component: {fileID: -3921998449703201913}
   m_Layer: 0
   m_Name: PinBall
@@ -34,7 +35,7 @@ Transform:
   m_Children:
   - {fileID: 4857439676318930462}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &7185945963649834071
 CapsuleCollider:
@@ -182,6 +183,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &8439620748082794432
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3964903785039525038}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.21168485, y: 0, z: 0.21271157}
+  m_Center: {x: 0.015412096, y: 0.37561405, z: -0.0038659573}
 --- !u!114 &-3921998449703201913
 MonoBehaviour:
   m_ObjectHideFlags: 0

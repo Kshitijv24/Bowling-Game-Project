@@ -6,9 +6,9 @@ public class PinBall : MonoBehaviour
 {
     [SerializeField] AudioSource audioSource;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.GetComponent<BowlingBall>())
+        if(other.tag == "Ground")
         {
             audioSource.Play();
         }

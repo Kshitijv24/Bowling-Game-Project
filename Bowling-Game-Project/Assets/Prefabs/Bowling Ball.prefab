@@ -224,7 +224,7 @@ Transform:
   - {fileID: 8298394608621405452}
   - {fileID: 3182958185390846723}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -60, y: 0, z: 0}
 --- !u!135 &1670279938063132260
 SphereCollider:
