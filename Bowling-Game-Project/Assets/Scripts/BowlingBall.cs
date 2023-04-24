@@ -16,6 +16,7 @@ public class BowlingBall : MonoBehaviour
     Vector2 fingerUpPosition;
     float minSwipeDistance = 50f;
     Vector3 ballPosition;
+    bool isMoving = false;
 
     private void Start()
     {
@@ -24,6 +25,8 @@ public class BowlingBall : MonoBehaviour
 
     private void Update()
     {
+        if (isMoving) return;
+
         MoveForwardWithKeyboardInputs();
         MoveLeftAndRight();
     }
@@ -44,7 +47,7 @@ public class BowlingBall : MonoBehaviour
             audioSource.Play();
             rb.AddForce(Vector3.forward * moveSpeed, ForceMode.Impulse);
             //rb.velocity = Vector3.forward * moveSpeed;
-            
+            isMoving = true;
         }
     }
 
