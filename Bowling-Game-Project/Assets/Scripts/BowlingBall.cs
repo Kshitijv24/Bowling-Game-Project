@@ -6,11 +6,11 @@ public class BowlingBall : MonoBehaviour
 {
     [SerializeField] float moveSpeed;
     [SerializeField] Rigidbody rb;
-    [SerializeField] GameObject ballHeighlight;
     [SerializeField] float maxRightDistance;
     [SerializeField] float maxLeftDistance;
     [SerializeField] AudioSource audioSource;
     [SerializeField] Animator animator;
+    [SerializeField] FollowCamera followCamera;
 
     Vector2 startTouchPosition;
     Vector2 fingerDownPosition;
@@ -37,15 +37,15 @@ public class BowlingBall : MonoBehaviour
     {
         if(collision.gameObject.tag == "Pin")
         {
-            animator.SetBool("IsHitPin", true);
-        }
-    }
-
-    private void OnCollisionExit(Collision collision)
-    {
-        if(collision.gameObject.tag == "Ground")
-        {
+            //animator.SetBool("IsHitPin", true);
+            animator.SetBool("IsRolling", false);
             audioSource.Stop();
+            followCamera.enabled = false;
+        }
+
+        if(collision.gameObject.tag == "Wall")
+        {
+            rb.velocity = Vector3.zero;
         }
     }
 
