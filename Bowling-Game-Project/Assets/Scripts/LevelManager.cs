@@ -9,7 +9,7 @@ public class LevelManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
     }
 }

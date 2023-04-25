@@ -10,14 +10,17 @@ public class PinBall : MonoBehaviour
     [SerializeField] AudioSource audioSource;
     [SerializeField] TextMeshProUGUI youWinText;
 
+    bool pinIsFalled;
+
     private void Start()
     {
         youWinText.enabled = false;
+        pinIsFalled = false;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Ball")
+        if(collision.gameObject.tag == "Ball" && !pinIsFalled)
         {
             audioSource.Play();
         }
@@ -27,6 +30,7 @@ public class PinBall : MonoBehaviour
     {
         if (other.gameObject.tag == "Ground")
         {
+            pinIsFalled = true;
             noOfPinBall++;
             
             if(noOfPinBall == 4)
