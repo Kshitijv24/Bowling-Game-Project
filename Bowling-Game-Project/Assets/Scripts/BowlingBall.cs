@@ -6,10 +6,11 @@ public class BowlingBall : MonoBehaviour
 {
     [SerializeField] float moveSpeed;
     [SerializeField] Rigidbody rb;
-    [SerializeField] GameObject ballHeighlight;
     [SerializeField] float maxRightDistance;
     [SerializeField] float maxLeftDistance;
     [SerializeField] AudioSource audioSource;
+    [SerializeField] Animator animator;
+    [SerializeField] FollowCamera followCamera;
 
     Vector2 startTouchPosition;
     Vector2 fingerDownPosition;
@@ -21,6 +22,7 @@ public class BowlingBall : MonoBehaviour
     private void Start()
     {
         ballPosition = transform.position;
+        animator.SetBool("IsRolling", false);
     }
 
     private void Update()
@@ -31,11 +33,19 @@ public class BowlingBall : MonoBehaviour
         MoveLeftAndRight();
     }
 
-    private void OnCollisionExit(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Ground")
+        if(collision.gameObject.tag == "Pin")
         {
+            //animator.SetBool("IsHitPin", true);
+            animator.SetBool("IsRolling", false);
             audioSource.Stop();
+            followCamera.enabled = false;
+        }
+
+        if(collision.gameObject.tag == "Wall")
+        {
+            rb.velocity = Vector3.zero;
         }
     }
 
@@ -43,7 +53,7 @@ public class BowlingBall : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Destroy(ballHeighlight);
+            animator.SetBool("IsRolling", true);
             audioSource.Play();
             rb.AddForce(Vector3.forward * moveSpeed, ForceMode.Impulse);
             //rb.velocity = Vector3.forward * moveSpeed;
