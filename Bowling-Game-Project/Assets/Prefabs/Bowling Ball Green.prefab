@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1068913160972111113}
   - component: {fileID: 6917146690546762736}
   m_Layer: 0
-  m_Name: Bowling Ball
+  m_Name: Bowling Ball Green
   m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,7 +35,7 @@ Transform:
   m_Children:
   - {fileID: 8298394608621405452}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -60, y: 0, z: 0}
 --- !u!135 &1670279938063132260
 SphereCollider:
@@ -220,6 +220,7 @@ MonoBehaviour:
   maxLeftDistance: -0.8
   audioSource: {fileID: -6467580115309535744}
   animator: {fileID: 1068913160972111113}
+  followCamera: {fileID: 0}
 --- !u!1001 &8404676312225555175
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -272,6 +273,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 353b29406fe45374abd9897c368ca317, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4536fecb8bcdf854d9e58dfb49a8e334, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 353b29406fe45374abd9897c368ca317, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4536fecb8bcdf854d9e58dfb49a8e334, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 353b29406fe45374abd9897c368ca317, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4536fecb8bcdf854d9e58dfb49a8e334, type: 2}
     - target: {fileID: 919132149155446097, guid: 353b29406fe45374abd9897c368ca317, type: 3}
       propertyPath: m_Name
       value: Ball
