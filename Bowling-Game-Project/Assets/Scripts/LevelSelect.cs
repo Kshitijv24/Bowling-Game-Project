@@ -5,6 +5,27 @@ using UnityEngine.SceneManagement;
 
 public class LevelSelect : MonoBehaviour
 {
+    [SerializeField] GameObject firstPannel;
+    [SerializeField] GameObject secondPannel;
+
+    private void Start()
+    {
+        firstPannel.SetActive(true);
+        secondPannel.SetActive(false);
+    }
+
+    public void NextButton()
+    {
+        firstPannel.SetActive(false);
+        secondPannel.SetActive(true);
+    }
+
+    public void PrevButton()
+    {
+        firstPannel.SetActive(true);
+        secondPannel.SetActive(false);
+    }
+
     public void LoadLevel1()
     {
         SceneManager.LoadScene("Level1");
