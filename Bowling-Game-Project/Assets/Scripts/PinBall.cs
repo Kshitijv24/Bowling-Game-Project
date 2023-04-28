@@ -14,7 +14,7 @@ public class PinBall : MonoBehaviour
 
     private void Start()
     {
-        youWinText.enabled = false;
+        youWinText.gameObject.SetActive(false);
         pinIsFalled = false;
     }
 
@@ -33,9 +33,9 @@ public class PinBall : MonoBehaviour
             pinIsFalled = true;
             noOfPinBall++;
             
-            if(noOfPinBall == 4)
+            if(noOfPinBall >= 4)
             {
-                youWinText.enabled = true;
+                youWinText.gameObject.SetActive(true);
             }
         }
     }

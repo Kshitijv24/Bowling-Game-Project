@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class FollowCamera : MonoBehaviour
 {
-    [SerializeField] Transform bowlingBall;
+    BowlingBall bowlingBall;
+
+    private void Start()
+    {
+        bowlingBall = FindObjectOfType<BowlingBall>();
+    }
 
     private void LateUpdate()
     {
@@ -12,6 +17,6 @@ public class FollowCamera : MonoBehaviour
             new Vector3(
                 transform.position.x,
                 transform.position.y,
-                bowlingBall.position.z - 2.35f);
+                bowlingBall.transform.position.z - 2.35f);
     }
 }

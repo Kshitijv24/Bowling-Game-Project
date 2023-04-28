@@ -10,7 +10,7 @@ public class BowlingBall : MonoBehaviour
     [SerializeField] float maxLeftDistance;
     [SerializeField] AudioSource audioSource;
     [SerializeField] Animator animator;
-    [SerializeField] FollowCamera followCamera;
+    //[SerializeField] FollowCamera followCamera;
 
     Vector2 startTouchPosition;
     Vector2 fingerDownPosition;
@@ -40,7 +40,8 @@ public class BowlingBall : MonoBehaviour
             //animator.SetBool("IsHitPin", true);
             animator.SetBool("IsRolling", false);
             audioSource.Stop();
-            followCamera.enabled = false;
+            //followCamera.enabled = false;
+            Camera.main.GetComponent<FollowCamera>().enabled = false;
         }
 
         if(collision.gameObject.tag == "Wall")

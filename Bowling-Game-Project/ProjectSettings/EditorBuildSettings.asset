@@ -9,15 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 2fe72d14c98847241a5b09d9f1c3c297
   - enabled: 1
-    path: Assets/Scenes/DemoLevel.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
-    path: Assets/Scenes/Level1.unity
-    guid: 9b48423ce4d74ec49b513b3cdb041709
+    path: Assets/Scenes/BallSelect.unity
+    guid: d6db533065919af4086c92ccb8402655
   - enabled: 1
     path: Assets/Scenes/LevelSelect.unity
     guid: 5bc1e052db6da6b4c9c4a4f46b841140
   - enabled: 1
-    path: Assets/Scenes/BallSelect.unity
-    guid: d6db533065919af4086c92ccb8402655
+    path: Assets/Scenes/Level1.unity
+    guid: 9b48423ce4d74ec49b513b3cdb041709
+  - enabled: 1
+    path: Assets/Scenes/DemoLevel.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
