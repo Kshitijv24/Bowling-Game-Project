@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8439620748082794432}
   - component: {fileID: -3921998449703201913}
   m_Layer: 0
-  m_Name: PinBall
+  m_Name: Pin
   m_TagString: Pin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
