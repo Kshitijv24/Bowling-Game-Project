@@ -582,9 +582,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.31817275, y: 0.9489382, z: 4.5810375}
+    m_Target: {x: 1.4877877, y: 0.90612054, z: 9.1942835}
     speed: 2
-    m_Value: {x: 0.31817275, y: 0.9489382, z: 4.5810375}
+    m_Value: {x: 1.4877877, y: 0.90612054, z: 9.1942835}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -630,13 +630,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.07747948, y: 0.13773042, z: -0.010807641, w: -0.9873764}
+    m_Target: {x: -0.05427592, y: -0.01587948, z: 0.00086340716, w: -0.99840087}
     speed: 2
-    m_Value: {x: -0.07747948, y: 0.13773042, z: -0.010807641, w: -0.9873764}
+    m_Value: {x: -0.054275833, y: -0.015879456, z: 0.0008634058, w: -0.9983993}
   m_Size:
-    m_Target: 1.3789607
+    m_Target: 4.402598
     speed: 2
-    m_Value: 1.3789607
+    m_Value: 4.402598
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -654,7 +654,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: -0.16843246, y: 0.080334514, z: -0.013774234, w: -0.98233795}
+  m_LastSceneViewRotation: {x: -0.07747948, y: 0.13773042, z: -0.010807641, w: -0.9873764}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -734,7 +734,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 28fbffff
+      m_ExpandedIDs: ec3cfeff883dfeffec3ffeffe24afeff5c54fefff05cfeff0673feffe473feff0a75feff9a75feff5c7efeff3e87feffb28efeffaaa5feffd2aafeffe8adfeff24bcfeff86c7fefff0cefeff74f9feff82fffeffee0effff0410ffff1e11ffff3c12ffff0c14ffff961dffff5220ffff543effff6e42ffff1c43ffffee46fffff457ffff5869ffff1c72ffffc676ffffe278ffffc885ffffea88ffffd89bffff2a9dffffe0a1ffff64afffff86b1ffff24b6ffffb8bbffff66c3ffffeecbffffd6d4ffff86f1ffff28fbffffba790000208e000064d7000002ee0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -805,7 +805,7 @@ MonoBehaviour:
     m_SkipHidden: 1
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scenes/Levels
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -849,7 +849,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000465b0000485b0000
+    m_ExpandedIDs: 3eebffffffffffff00000000465b0000ae5b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -865,7 +865,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 9}
+      m_ClientGUIView: {fileID: 2}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
